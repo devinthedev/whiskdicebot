@@ -482,7 +482,7 @@ socket.on("connect", function() {
 
             }
             if (data.message === "!commands" && data.room === "botgames") {
-                chat('botgames', '[b]Commands: !help, !state, !history (check bet history), !bots (get info on running bots)[/b]', "090");
+                chat('botgames', '[b]Commands: !help, !state, !stats, !history (check bet history), !bots (get info on running bots)[/b]', "090");
                 socket.emit("getbalance", {});
 
             }
