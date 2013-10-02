@@ -486,6 +486,10 @@ socket.on("connect", function() {
                 socket.emit("getbalance", {});
 
             }
+            //Does this work?
+             if(contains(data.message, ["<span class='label label-success'>has tipped " + username, "donation"])){
+                outputBuffer.push({room: data.room, color: "000", message: "Thank you for the tip, " + data.user + "!"})
+            }
 
             if (data.message === "!state" && data.room === "botgames") {
                 socket.emit("getbalance", {});
